@@ -12,10 +12,10 @@ weight: 1
 
         ![Create new project](GitLab_New_project.png)
 
-        Give a name to your project and click **Create project** button. 
+        Give a name to your project and click **Create project** button.
 
         ![New project](GitLab_Created_Project.png)
-    
+
     - Login to the GitLab server (over ssh or to the local console) and install JRE:
 
         - for CentOS 6/7:
@@ -25,21 +25,21 @@ weight: 1
         - for Debian and Ubuntu:
 
                 $ sudo apt-get install default-jre
-              
+
         - for OpenSUSE:
-        
+
                 $ zypper in java-1_8_0-openjdk
 
     - install SubGit binary:
-    
+
         - On CentOS and OpenSUSE Linux download universal **subgit-3.2.4.zip** binary:
 
             https://subgit.com/download/subgit-3.2.4.zip
-                
+
             and unzip it:
-            
+
                 $ unzip subgit-3.2.4.zip
-                
+
         - on Debian and Ubuntu download Debian package:
 
             https://subgit.com/download/subgit_3.2.4_all.deb
@@ -51,7 +51,7 @@ weight: 1
 
 
 2. Configure the repository:
-    
+
     - Change identity to 'git' user:
 
             su git
@@ -71,17 +71,17 @@ weight: 1
               total 0
               drwxrwx---. 6 git git 131 apr 25 02:06 project.git
               drwxrwx---. 6 git git 131 apr 25 02:06 project.wiki.git
-        
+
     - Run this command to configure SubGit import:
 
             $ /temp/subgit-3.2.4/bin/subgit configure --layout auto --trunk trunk SVN_URL GIT_REPO
 
        > **To be added into pop-up cloud (when hovering on SVN_URL and GIT_REPO):**
-       > 
+       >
        > **SVN_URL** - URL to the SVN project.
-       > 
+       >
        > **GIT_REPO** - path to new Git repository where data from the SVN project will be imported to.
-            
+
        ***see command example --> (to be placed in drop-down block):***
 
             $ /tmp/subgit-3.2.4/bin/subgit configure --layout auto --trunk trunk http://svn.example.com/svn/repository/project ./project.git
@@ -141,7 +141,7 @@ weight: 1
 
             Authentication realm: <http://svn.example.com:80> Subversion Repository
             Username [git]: user
-            Password for 'user': 
+            Password for 'user':
 
             Translating Subversion revisions to Git commits...
 
@@ -161,7 +161,7 @@ weight: 1
         **GIT_REPO** - GitLab project URL:
 
         ![GitLab project URL](GitLab_project_URL.png)
-          
+
         ***see command example --> (to be placed in drop-down block):***
 
         - on Windows:
@@ -177,7 +177,7 @@ weight: 1
 
                 $ git clone http://user@example.com/user/project.git ./project.git
                 Cloning into './project.git'...
-                Password for 'http://user@example.com': 
+                Password for 'http://user@example.com':
                 remote: Counting objects: 99, done.
                 remote: Compressing objects: 100% (39/39), done.
                 remote: Total 99 (delta 50), reused 99 (delta 50)
